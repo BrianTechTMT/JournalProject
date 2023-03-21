@@ -1,5 +1,5 @@
 # JournalProject
-Version 0 Beta 1:
+## Version 0 Beta 1:
 - Features:
   + Application have hard code login credential as "admin"
   + Able to run and add new journal based on manual ID
@@ -14,7 +14,8 @@ Version 0 Beta 1:
   + Add in timestamp
   + Able to check ID
   + Manual Login and Manual Sign Up
-Version 0 Beta 1.1:
+  + 
+## Version 0 Beta 1.1:
 - Features:
   + Added manual entry for username and password
 - Issues:
