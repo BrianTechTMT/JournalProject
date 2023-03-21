@@ -14,11 +14,11 @@ private:
     string password;
 public:
     bool userLogin(string username, string password) {
+        // cout << username << password;
         if (username.compare("admin") == 0 and password.compare("admin") == 0) {
             return true;
         }
         else
-            cout << username << password;
             return false;
     }
 };

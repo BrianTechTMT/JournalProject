@@ -16,6 +16,14 @@ public:
     int journalID;
     string journalData;
     map<int, string>journal;
+    void JournalEntry(){
+        cin.ignore();
+        cout << "Create new Journal\n Please enter Journal ID: ";
+        cin >> journalID;
+        cout << "Please enter what you want to write today:";
+        cin.ignore();
+        getline (cin, journalData);
+    }
     void createNewJournal(int journalID, string journalData){
         journal.insert({journalID,journalData});
     }
