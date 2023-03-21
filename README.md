@@ -14,3 +14,12 @@ Version 0 Beta 1:
   + Add in timestamp
   + Able to check ID
   + Manual Login and Manual Sign Up
+Version 0 Beta 1.1:
+- Features:
+  + Added manual entry for username and password
+- Issues:
+  + Known Issues from 0B1
+  + Still no account sign up
+- Upcoming Features:
+  + Known features
+  + Attach users to their journal
