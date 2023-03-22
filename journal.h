@@ -15,7 +15,7 @@ class JournalDetails{
 public:
     int journalID;
     string journalData;
-    map<int, string>journal;
+    map<string, pair<int,string>> journal;
     void JournalEntry(){
         cin.ignore();
         cout << "Create new Journal\n Please enter Journal ID: ";
@@ -24,8 +24,8 @@ public:
         cin.ignore();
         getline (cin, journalData);
     }
-    void createNewJournal(int journalID, string journalData){
-        journal.insert({journalID,journalData});
+    void createNewJournal(string username, int journalID, string journalData)
+    {
+        journal.insert({username, pair(journalID,journalData)});
     }
-    
 };
