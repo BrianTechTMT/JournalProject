@@ -21,6 +21,9 @@
 - Issues:
   + Known Issues from 0B1
   + Still no account sign up
+  + Login checking system is not optimal. Need to Login in first then show the other options on the menu
+  + Journals are not saved correctly
+  + Can only display the first entry that was put in
 - Upcoming Features:
   + Known features
   + Attach users to their journal
