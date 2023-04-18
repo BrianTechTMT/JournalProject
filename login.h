@@ -7,6 +7,7 @@
 
 #endif //JOURNALPROJECT_LOGIN_H
 #include <string>
+
 using namespace std;
 class LoginClass{
 private:

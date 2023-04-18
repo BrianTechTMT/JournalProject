@@ -14,8 +14,8 @@
   + Add in timestamp
   + Able to check ID
   + Manual Login and Manual Sign Up
-  + 
-## Version 0 Beta 1.1:
+  
+## Version 0 Beta 1.1.0:
 - Features:
   + Added manual entry for username and password
 - Issues:
@@ -27,3 +27,28 @@
 - Upcoming Features:
   + Known features
   + Attach users to their journal
+
+## Version 0 Beta 1.1.1:
+- Fixes:
+  + switching from using map to vector to save journals correctly
+  + Journal is now displaying all entries
+- Upcoming Fixes:
+  + Save the journal vector as json
+  + Able to read the json to know journals are in there base on their account
+
+## Version 0 Beta 1.1.2:
+- Fixes:
+  + Save the journal vector as json
+  + Able to read the json to know journals are in there base on their account
+- Upcoming Fixes -> Beta 1.2.0:
+  + Able to load JSON and Print it
+  + Move Print function as hard code from main.cpp to journal.h
+
+
+## Version 0 Beta 1.2.0:
+- Fixes:
+  + Able to load JSON and Print it
+  + Move Print function as hard code from main.cpp to journal.h
+  + Fixed first screen with limited options
+  + After login you will have your entries load up
+  
