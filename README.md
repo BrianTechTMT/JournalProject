@@ -49,6 +49,6 @@
 - Fixes:
   + Able to load JSON and Print it
   + Move Print function as hard code from main.cpp to journal.h
-  + Fixed first screen with limited options
-  + After login you will have your entries load up
+  + Fixed first screen with limited option with just logging in
+  + After logging in you will have your entries load up in the background
   
