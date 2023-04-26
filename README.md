@@ -52,3 +52,11 @@
   + Fixed first screen with limited option with just logging in
   + After logging in you will have your entries load up in the background
   
+# Version 0 Beta 1.2.1:
+- Fixes:
+  + Testing version 0 beta 1.2.1 of the project. Building checking if the json exist, if
+    not then continue instead of breaking the program
+- Need to Fix:
+  + Automatic Generate ID and Assign for each journal of each user
+  + Automatic add in timestamp of creation date
+  + Add the timestamp in JSON
