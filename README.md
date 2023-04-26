@@ -60,3 +60,13 @@
   + Automatic Generate ID and Assign for each journal of each user
   + Automatic add in timestamp of creation date
   + Add the timestamp in JSON
+
+# Version 0 Beta 1.2.2:
+- Fixes:
+  + Automatic Generate ID and Assign for each journal of each user
+  + Automatic add in timestamp of creation date
+  + Add the timestamp in JSON
+- Need to Add:
+  + Add remove function
+  + Make sure when remove, the entries is not removed entirely, but everything on it will be blank beside Entry ID
+  + Fix up Print with the remove so that non-blank entries are displaying 

@@ -16,4 +16,8 @@ public:
             return false;
         }
     }
+    // Create a entries for username and password
+    // Store them in json file
+    // When login, check the the entries with existing database inside json file
+    // pull the data store on the variables
 };

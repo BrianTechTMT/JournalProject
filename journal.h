@@ -57,17 +57,24 @@ public:
     }
 
     void save_as_json(vector<tuple<string, string, pair<int, string>>> saving_journal) {
-        for (const auto& element : saving_journal) {
+        string json_file_name = get<0>(saving_journal[0]) + ".json";
+        filesystem::path path = "my_file.json";
+
+        // Check if the file exists
+        if (filesystem::exists(json_file_name))
+            filesystem::remove(json_file_name);
+            // The file does not exist
+        cout << "The file does not exist." << endl;
+        for (const auto &element: saving_journal) {
             journal_json_data.push_back({
                                                 {"username", get<0>(element)},
-                                                {"journal", {
+                                                {"journal",  {
                                                                      {"timestamp", get<1>(element)},
                                                                      {"id", get<2>(element).first},
                                                                      {"entry", get<2>(element).second}
                                                              }}
                                         });
         }
-        string json_file_name = get<0>(saving_journal[0]) + ".json";
         ofstream json_file(json_file_name, ios::app);
         json_file << setw(4) << journal_json_data << endl;
     }
