@@ -28,14 +28,14 @@ public:
 
     void create_new_journal(string username, string journal_data) {
         json data;
-        time_t rawtime;
-        struct tm *timeinfo;
+        time_t raw_time;
+        struct tm *time_info;
         char buffer[80];
 
-        time(&rawtime);
-        timeinfo = localtime(&rawtime);
+        time(&raw_time);
+        time_info = localtime(&raw_time);
 
-        strftime(buffer, sizeof(buffer), "%d-%m-%Y %H:%M:%S", timeinfo);
+        strftime(buffer, sizeof(buffer), "%d-%m-%Y %H:%M:%S", time_info);
         string current_time = buffer;
 
         if (journal.size() != 0) {
@@ -85,8 +85,8 @@ public:
             ifstream ifs(json_file_name);
             json j;
             ifs >> j;
-            string loaded_username = j[0]["username"];
-            if (username == loaded_username) {
+            string stored_username = j[0]["username"];
+            if (username == stored_username) {
                 cout << "loading previous entries" << endl;
                 vector<pair<string, pair<int, string>>> loading_journal;
                 for (const auto& element : j) {
