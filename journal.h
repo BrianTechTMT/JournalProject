@@ -49,22 +49,19 @@ public:
     void print_journal() {
         cin.ignore();
         for (const auto& data : journal) {
-            cout << "Username: " << get<0>(data) << " | "
-                 << "Timestamp: " << get<1>(data) << " | "
-                 << "Entry ID: " << get<2>(data).first << " | "
-                 << "Entry: " << get<2>(data).second << "\n";
+            if(get<2>(data).second != "")
+            cout    << "Entry ID: " << get<2>(data).first << " | "
+                    << "Timestamp: " << get<1>(data) << " | "
+                    << "Entry: " << get<2>(data).second << "\n";
         }
     }
 
     void save_as_json(vector<tuple<string, string, pair<int, string>>> saving_journal) {
         string json_file_name = get<0>(saving_journal[0]) + ".json";
-        filesystem::path path = "my_file.json";
 
-        // Check if the file exists
         if (filesystem::exists(json_file_name))
             filesystem::remove(json_file_name);
-            // The file does not exist
-        cout << "The file does not exist." << endl;
+            // The file does not exist then create new
         for (const auto &element: saving_journal) {
             journal_json_data.push_back({
                                                 {"username", get<0>(element)},
@@ -99,5 +96,15 @@ public:
                 cout << "... Completed" << endl;
             }
         }
+    }
+
+    void remove_entry(int journal_id){
+        for(int i = 0; i< journal.size(); i++){
+            if(get<2>(journal[i]).first == journal_id){
+                get<1>(journal[i])="";
+                get<2>(journal[i]).second="";
+            }
+        }
+
     }
 };
